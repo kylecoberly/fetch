@@ -1,6 +1,9 @@
-<h2 id="title">Welcome to Ember.js</h2>
+{{partial 'shared/top-bar'}}
 
-{{outlet}}
+<div class="row">
+  <div class="small-12 columns">
+    {{outlet}}
+  </div>
+</div>
 
-<h2 id="title">My Map Component</h2>
-{{google-map latitude="34.851939" longitude="-82.399752"}}
+{{partial 'shared/footer'}}
