@@ -1,0 +1,112 @@
+<div class="row">
+  <div {{bind-attr class=":small-12 session.isAuthenticated:medium-6 :columns"}}>
+    <h1>This is an Example</h1>
+
+    <p>This is an example app that makes use of:</p>
+
+    <ul class="task-list">
+      <li><a href="https://github.com/stefanpenner/ember-cli">Ember CLI</a></li>
+      <li><a href="http://rubyonrails.org/">Rails 4.1</a></li>
+      <li><a href="https://github.com/simplabs/ember-simple-auth">Ember Simple Auth</a></li>
+      <li><a href="https://github.com/Vestorly/torii">Torii</a></li>
+    </ul>
+  </div>
+
+  {{#if session.isAuthenticated}}
+    <div class="small-12 medium-6 columns">
+      <div class="panel text-center">
+        <img src="/images/seinfeld-omg.gif" />
+      </div>
+    </div>
+  {{/if}}
+</div>
+
+
+
+
+
+
+<section class="module parallax parallax-1">
+  <div class="container">
+    <h1>Welcome to Fetch</h1>
+  </div>
+</section>
+
+<section class="module content">
+  <div class="container">
+  <span>
+{{view Ember.Select content=model.locations value=selectedLocation optionLabelPath="content.name"}}
+{{#if selectedLocation}}
+  {{google-map latitude=selectedLocation.latitude longitude=selectedLocation.longitude markers=model.markers}}
+{{/if}}
+</span>
+  </div>
+</section>
+
+<section class="module parallax parallax-2">
+  <div class="container">
+    <h1>Rise</h1>
+  </div>
+</section>
+
+<section class="module content">
+  <div class="container">
+    <h2>Lorem Ipsum Dolor</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+  </div>
+</section>
+
+<section class="module parallax parallax-3">
+  <div class="container">
+    <h1>Calm</h1>
+  </div>
+</section>
+
+<section class="module content">
+  <div class="container">
+    <h2>Lorem Ipsum Dolor</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+  </div>
+</section>
+
+<section class="module parallax parallax-4">
+  <div class="container">
+    <h1>Calm</h1>
+  </div>
+</section>
+
+<section class="module content">
+  <div class="container">
+    <h2>Lorem Ipsum Dolor</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+  </div>
+</section>
+
+<section class="module parallax parallax-5">
+  <div class="container">
+    <h1>Calm</h1>
+  </div>
+</section>
+
+<section class="module content">
+  <div class="container">
+    <h2>Lorem Ipsum Dolor</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+  </div>
+</section>
+
+<section class="module parallax parallax-6">
+  <div class="container">
+    <h1>The End</h1>
+  </div>
+</section>
+
+<section class="module content">
+  <div class="container">
+    <h2>Lorem Ipsum Dolor</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+  </div>
+</section>
+
+
+
