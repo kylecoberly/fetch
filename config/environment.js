@@ -19,13 +19,15 @@ module.exports = function(environment) {
     }
   };
   ENV.contentSecurityPolicy = {  
-    'script-src': "'self' 'unsafe-eval' https://*.googleapis.com https://*.gstatic.com",
-       'img-src': "'self' https://*.googleapis.com https://*.gstatic.com",
-       'font-src': "'self' https://*.gstatic.com",
-       'style-src': "'self' 'unsafe-inline' https://*.googleapis.com"
-};
+   'script-src': "'self' 'unsafe-eval' 'unsafe-inline' https://*.googleapis.com https://*.gstatic.com https://code.jquery.com https://cdnjs.cloudflare.com",
+   'img-src': "'self' https://*.flickr.com https://*.googleapis.com https://*.gstatic.com data:",     
+   'font-src': "'self' https://*.gstatic.com https://cdnjs.cloudflare.com",
+   'connect-src': "'self'",
+   'style-src': "'self' 'unsafe-inline' https://*.googleapis.com https://cdnjs.cloudflare.com https://fonts.gstatic.com https://fonts.googleapis.com",
+   'media-src': "'self'"
+ };
 
-  if (environment === 'development') {
+ if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;

@@ -1,5 +1,4 @@
 @import "settings";
-
 @import "foundation";
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu|Roboto);
@@ -25,27 +24,6 @@
   -webkit-transition: all 0.7s ease-in-out;
   -moz-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
-}
-
-.fa-2 { font-size: 2em; }
-
-#footer {
-  width: 100%;
-  padding: 25px 0;
-  border-top: 1px solid #dfd7d4;
-  color: #bbbbbb;
-
-  a { color: #464646; }
-}
-
-.created-by {
-  display: block;
-  padding-top: 8px;
-
-  @media #{$small-only} {
-    margin-bottom: 1em;
-    text-align: center;
-  }
 }
 
 .box {
