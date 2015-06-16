@@ -1,9 +1,8 @@
-#server.rb
+# server.rb
 require 'sinatra'
 
-configure do 
-  set :public_folder,
-  File.expand_path('dist')
+configure do
+  set :public_folder, File.expand_path('dist')
 end
 
 get '*' do
