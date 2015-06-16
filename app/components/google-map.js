@@ -19,29 +19,29 @@ export default Ember.Component.extend({
     this.set('markerCache', []);
     this.setMarkers();
   }.on('didInsertElement'),
-    coordinatesChanged: function() {
-      var map = this.get('map');
+  coordinatesChanged: function() {
+    var map = this.get('map');
 
-      if (map) {
-        map.setCenter(new window.google.maps.LatLng(
-          this.get('latitude'), 
-          this.get('longitude')
-          ));
-      }
-    }.observes('latitude', 'longitude'),
-    setMarkers: function() {
-      var map = this.get('map');
-      var markers = this.get('markers');
-      var markerCache = this.get('markerCache');
+    if (map) {
+      map.setCenter(new window.google.maps.LatLng(
+        this.get('latitude'), 
+        this.get('longitude')
+        ));
+    }
+  }.observes('latitude', 'longitude'),
+  setMarkers: function() {
+    var map = this.get('map');
+    var markers = this.get('markers');
+    var markerCache = this.get('markerCache');
 
-      markerCache.forEach(function(marker) { marker.setMap(null); 
+    markerCache.forEach(function(marker) { marker.setMap(null); 
       }); // Remove all existing markers
-      markers.forEach(function(marker){
+    markers.forEach(function(marker){
       var gMapsMarker = new window.google.maps.Marker({
         position: new window.google.maps.LatLng(marker.get('latitude'), 
           marker.get('longitude')),
         map: map
-    });
+      });
         markerCache.pushObject(gMapsMarker); //Add this marker to the cache
       }, this);
       //generates markers everytime the lat and long are changed 
