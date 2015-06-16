@@ -8,10 +8,7 @@
 <section class="module content">
   <div class="container">
     <span>
-      {{view "select" content=model.locations value=selectedLocation optionLabelPath="content.name"}}
-      {{#if selectedLocation}}
-      {{google-map latitude=selectedLocation.latitude longitude=selectedLocation.longitude markers=model.markers}}
-      {{/if}}
+
     </span>
   </div>
 </section>
@@ -102,4 +99,7 @@
 </section>
 
 
-
+{{view "select" content=model.locations value=selectedLocation optionLabelPath="content.name"}}
+{{#if selectedLocation}}
+{{google-map latitude=selectedLocation.latitude longitude=selectedLocation.longitude markers=model.markers}}
+{{/if}}
