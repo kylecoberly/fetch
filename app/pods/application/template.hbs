@@ -1,0 +1,11 @@
+{{partial 'shared/top-bar'}}
+<h1 id='title'>It's 5'o'clock somewhere</h1>
+
+<ul>
+  <li>{{#link-to 'clock'}}Clock{{/link-to}}</li>
+  <li>{{#link-to 'timezones'}}Manage Timezones{{/link-to}}</li>
+</ul>
+{{!-- way of reserving space on the page for the content a user is requesting to view --}}
+{{outlet}}
+
+{{partial 'shared/footer'}}
