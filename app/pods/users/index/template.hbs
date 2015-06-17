@@ -1,6 +1,9 @@
 <h1>Users Index</h1>
+{{! The context here is the controller}}
+
+<h2>Total users: {{model.length}}</h2>
 <ul>
   {{#each user in model}}
-  <li>{{user.firstName}} {{user.lastName}}</li>
+  <li>{{user.id}} - {{user.firstName}} {{user.lastName}}</li>
   {{/each}}
 </ul>

@@ -5,3 +5,8 @@ export default Ember.Route.extend({
     return this.store.findAll('user');
   }
 });
+
+//can also do:
+// this.store.findQuery('user', {active: true})
+// or
+// this.store.find('user', 1)
