@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
       return true;
     },
     cancel: function(){
-      console.log('+- cancel action in friends new controller');
+      console.log('+- cancel action in users new controller');
       return true;
     }
   }

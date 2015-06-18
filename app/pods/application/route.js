@@ -7,7 +7,7 @@ export default Ember.Route.extend({
 
       return true;
     },
-    cance: function(){
+    cancel: function(){
       console.log('+---- cancel action bubbled up to the applicaiton route');
 
       return true;

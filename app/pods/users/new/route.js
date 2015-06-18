@@ -8,12 +8,12 @@ export default Ember.Route.extend({
   },
   actions: {
     save: function(){
-      console.log('+-- save action bubbled up to friends new route');
+      console.log('+-- save action bubbled up to users new route');
 
       return true;
     },
-    cance: function(){
-      console.log('+-- cancel action bubbled up to friends new route');
+    cancel: function(){
+      console.log('+-- cancel action bubbled up to users new route');
 
       return true;
     }
