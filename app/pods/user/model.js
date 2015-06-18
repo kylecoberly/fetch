@@ -13,6 +13,7 @@ import DS from 'ember-data';
 // We can also use relative imports.  So if we were in another model we
 // could have written
 // import User from './user';
+import Ember from 'ember';
 
 export default DS.Model.extend({
   // Ds.attr is the standard way to define attributes with Ember-Data
@@ -20,5 +21,8 @@ export default DS.Model.extend({
 
   // Defines an attribute called lastName of type **string**
   lastName: DS.attr('string'),
-  email: DS.attr('string')
+  email: DS.attr('string'),
+  fullName: Ember.computed('firstName', 'lastName', function(){
+    return this.get('firstName') + ' ' + this.get('lastName');
+  })
 });
