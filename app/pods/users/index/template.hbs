@@ -4,7 +4,12 @@
 <h2>Total users: {{model.length}}</h2>
 <ul>
   {{#each user in model}}
-  <li>{{user.id}} - {{user.firstName}} {{user.lastName}}</li>
+  <li>
+    {{#link-to 'users.show' user}}
+
+    {{user.id}} - {{user.firstName}} {{user.lastName}}
+    {{/link-to}}
+  </li>
   {{/each}}
 </ul>
 
