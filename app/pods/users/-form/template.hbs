@@ -1,4 +1,5 @@
 <form>
+  <h2> {{errorMessage}} </h2>
   <p>
     <label> First Name:
       {{input value=model.firstName}}
@@ -20,9 +21,9 @@
 {{!--   <input type="submit" value="Save"/>
  --}}  {{!-- action helper one of the most useful features in embe; allow us to bind an action in the template to an action in the template's controller or route.
 
-  bound to click action by default  --}}
-  <button {{action "save"}} >Save</button>
-  <button {{action "cancel"}}>Cancel</button>
+ bound to click action by default  --}}
+ <button {{action "save"}} >Save</button>
+ <button {{action "cancel"}}>Cancel</button>
 </form>
 
 
