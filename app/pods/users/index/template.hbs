@@ -6,7 +6,7 @@
   {{#each user in model}}
   <li>
     {{#link-to 'users.show' user}}
-    {{user.firstName}} {{user.lastName}}
+    {{user.fullName}}
     {{/link-to}}
   </li>
   {{/each}}

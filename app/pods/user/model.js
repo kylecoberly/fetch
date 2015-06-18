@@ -22,7 +22,7 @@ export default DS.Model.extend({
   // Defines an attribute called lastName of type **string**
   lastName: DS.attr('string'),
   email: DS.attr('string'),
-  fullName: Ember.computed('firstName', 'lastName', function(){
-    return this.get('firstName') + ' ' + this.get('lastName');
-  })
+  fullName: Ember.computed('firstName', 'lastName', function() { 
+    return this.get('firstName') + ' ' + this.get('lastName'); 
+  }) 
 });
