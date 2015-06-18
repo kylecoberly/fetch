@@ -15,8 +15,8 @@ export default Ember.Controller.extend({
       if (this.get('isValid')) { 
         var _this = this; 
         this.get('model').save().then(function(user) { 
-                  _this.transitionToRoute('users.show', user);
-              });
+          _this.transitionToRoute('users.show', user);
+        });
       } else {
         this.set('errorMessage', 'You have to fill all the fields'); 
       } 

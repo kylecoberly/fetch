@@ -1,7 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function(){
-    this.store.find('user');
+  model: function(params){
+    return this.store.find('user', params.user_id);
+  },
+  actions: {
+    save: function(){
+      return true;
+    },
+    cancel: function(){
+      return true;
+    }
   }
 });
