@@ -39,7 +39,9 @@ ul a {
   color: #fff;
   height: 50px;
 }
-
+li a {
+  color: #000;
+}
 div.footer {
   font-family: 'Bebas Neue';
   font-size: 30px;
@@ -97,7 +99,7 @@ section.module {
     position: absolute;
     top: 50%;
     left: 50%;
-  transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     text-transform: uppercase;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
