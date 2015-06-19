@@ -1,5 +1,7 @@
 @import "settings";
 @import "foundation";
+@import "foundation/components/tables";
+@import 'foundation/functions';
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu|Roboto);
 
@@ -25,7 +27,17 @@
   -moz-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
 }
-
+table {
+  color: #333;
+  background: #fff;
+  margin: 80px auto;
+  width: 100%;
+  thead th{
+    text-align: center;
+    font-family: 'Bebas Neue';
+    font-size:  1.25rem !important;
+  }
+}
 .box {
   padding-right: 15px;
   padding-left: 15px;

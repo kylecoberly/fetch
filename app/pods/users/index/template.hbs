@@ -6,7 +6,8 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th scope="column">Name</th>
+      <th scope="column">Dogs</th>
       <th></th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
     {{#each user in model}}
     <tr>
       <td>{{link-to user.fullName 'users.show' user}}</td>
+      <td>{{user.totalDogs}}</td>
       <td><a href="#" {{action 'delete' user}}>Delete</a></td>
     </tr>
     {{/each}}
