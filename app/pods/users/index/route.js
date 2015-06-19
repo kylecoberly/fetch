@@ -5,6 +5,7 @@ export default Ember.Route.extend({
     return this.store.findAll('user');
   },
   actions: {
+    // also need to update user show to support action
     delete: function(user){
       user.destroyRecord();
       return false;
