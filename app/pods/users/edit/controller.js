@@ -1,4 +1,4 @@
-import UsersBaseController from './base'
+import UsersBaseController from './base';
 
 export default UsersBaseController.extend({
   actions: {
