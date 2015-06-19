@@ -23,6 +23,7 @@ export default Ember.Controller.extend({
       return false;
     },
     cancel: function(){
+      // allows cancel action to bubble up because there are no implementations 
       return true;
     }
   }
