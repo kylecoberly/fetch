@@ -2,12 +2,21 @@
 {{! The context here is the controller}}
 
 <h2>Total users: {{model.length}}</h2>
-<ul>
-  {{#each user in model}}
-  <li>
-    {{link-to user.fullName 'users.show' user}}
-  </li>
-  {{/each}}
-</ul>
 
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each user in model}}
+    <tr>
+      <td>{{link-to user.fullName 'users.show' user}}</td>
+      <td><a href="#" {{action 'delete' user}}>Delete</a></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
 {{outlet}}

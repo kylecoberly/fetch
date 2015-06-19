@@ -3,6 +3,12 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model: function(){
     return this.store.findAll('user');
+  },
+  actions: {
+    delete: function(user){
+      user.destroyRecord();
+      return false;
+    }
   }
 });
 
