@@ -1,22 +1,11 @@
+
 <form>
   <h2> {{errorMessage}} </h2>
-  <p>
-    <label> First Name:
-      {{input value=model.firstName}}
-    </label>
-  </p>
 
-  <p>
-    <label>Last Name: 
-      {{input value=model.lastName}}
-    </label>
-  </p>
-
-  <p>
-    <label>Email:
-      {{input value=model.email}}
-    </label>
-  </p>
+  <fieldset>
+    {{input value=model.firstName placeholder='First Name'}}
+    {{input value=model.lastName placeholder='Last Name'}}
+    {{input value=model.email placeholder='E-mail'}}
 
 {{!--   <input type="submit" value="Save"/>
  --}}  {{!-- action helper one of the most useful features in embe; allow us to bind an action in the template to an action in the template's controller or route.
@@ -24,6 +13,8 @@
  bound to click action by default  --}}
  <button {{action "save"}} >Save</button>
  <button {{action "cancel"}}>Cancel</button>
+
+</fieldset>
 </form>
 
 

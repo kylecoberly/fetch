@@ -96,7 +96,7 @@ $include-html-global-classes: $include-html-classes;
 // $font-weight-bold: bold;
 
 // $white       : #FFFFFF;
-// $ghost       : #FAFAFA;
+$ghost       : #FAFAFA;
 // $snow        : #F9F9F9;
 // $vapor       : #F6F6F6;
 // $white-smoke : #F5F5F5;
@@ -183,13 +183,13 @@ $include-html-global-classes: $include-html-classes;
 // $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
 
 // $retina: (
-//  "#{$screen} and (-webkit-min-device-pixel-ratio: 2)",
-//  "#{$screen} and (min--moz-device-pixel-ratio: 2)",
-//  "#{$screen} and (-o-min-device-pixel-ratio: 2/1)",
-//  "#{$screen} and (min-device-pixel-ratio: 2)",
-//  "#{$screen} and (min-resolution: 192dpi)",
-//  "#{$screen} and (min-resolution: 2dppx)"
-// );
+  //  "#{$screen} and (-webkit-min-device-pixel-ratio: 2)",
+  //  "#{$screen} and (min--moz-device-pixel-ratio: 2)",
+  //  "#{$screen} and (-o-min-device-pixel-ratio: 2/1)",
+  //  "#{$screen} and (min-device-pixel-ratio: 2)",
+  //  "#{$screen} and (min-resolution: 192dpi)",
+  //  "#{$screen} and (min-resolution: 2dppx)"
+  // );
 
 // Legacy
 // $small: $medium-up;
@@ -456,7 +456,7 @@ $include-html-global-classes: $include-html-classes;
 // $button-font-med: rem-calc(16);
 // $button-font-lrg: rem-calc(20);
 // $button-font-weight: $font-weight-normal;
-// $button-font-align: center;
+$button-font-align: center;
 
 // We use these to control various hover effects.
 // $button-function-factor: -20%;

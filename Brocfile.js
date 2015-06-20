@@ -16,5 +16,18 @@ var app = new EmberApp();
 // modules that you would like to import into your application
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
+app.import('vendor/fontello.scss');
+app.import('vendor/fontello/font/fontello.ttf', {
+  destDir: 'font'
+});
+app.import('vendor/fontello/font/fontello.eot',{
+  destDir: 'font'
+});
+app.import('vendor/fontello/font/fontello.svg',{
+  destDir: 'font'
+});
+app.import('vendor/fontello/font/fontello.woff', {
+  destDir: 'font'
+});
 app.import('vendor/gmaps.js');
 module.exports = app.toTree();
