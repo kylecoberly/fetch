@@ -12,6 +12,7 @@ Router.map(function() {
     this.route('new');
     this.route('show', { path: ':user_id' }, function() {
       this.route('dogs', function() {
+        this.route('new');
       });
     });
     this.route('edit', { path: ':user_id/edit' });
