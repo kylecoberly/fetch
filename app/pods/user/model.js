@@ -16,7 +16,9 @@ import DS from 'ember-data';
 import Ember from 'ember';
 
 export default DS.Model.extend({
-  // Ds.attr is the standard way to define attributes with Ember-Data
+  // Define a hasMany and belongsTo relationship between dogs and users 
+  dogs: DS.hasMany('dog'),
+  // DS.attr is the standard way to define attributes with Ember-Data
   firstName: DS.attr('string'),
 
   // Defines an attribute called lastName of type **string**
@@ -24,5 +26,5 @@ export default DS.Model.extend({
   email: DS.attr('string'),
   fullName: Ember.computed('firstName', 'lastName', function() { 
     return this.get('firstName') + ' ' + this.get('lastName'); 
-  }) 
+  })
 });
