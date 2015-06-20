@@ -17,7 +17,7 @@ import Ember from 'ember';
 
 export default DS.Model.extend({
   // Define a hasMany and belongsTo relationship between dogs and users 
-  dogs: DS.hasMany('dog'),
+  dogs: DS.hasMany('dogs', {async: true}),
   // DS.attr is the standard way to define attributes with Ember-Data
   firstName: DS.attr('string'),
 
