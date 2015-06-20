@@ -1,1 +1,24 @@
 <h2>All My Dogs</h2>
+
+<table class='primary'>
+  <thead>
+    <tr>
+      <th scope='column'>Name</th>
+      <th scope='column'>Age</th>
+      <th scope='column'>Gender</th>
+      <th scope='column'>Breed</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each dog in model}}
+    <tr>
+      <td>{{dog.name}}</td>
+      <td>{{dog.age}}</td>
+      <td>{{dog.gender}}</td>
+      <td>{{dog.breed}}</td>
+      <td></td>
+      <td></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
