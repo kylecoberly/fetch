@@ -16,7 +16,7 @@ export default Ember.Component.extend({
   actions: {
     save: function(){
       if (this.get('isValid')){
-        var _this = this;
+        let _this = this;
         this.get('user').save().then(function(user){
           _this.transitionToRoute('users.show', user);
         });
