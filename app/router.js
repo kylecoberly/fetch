@@ -5,14 +5,16 @@ var Router = Ember.Router.extend({
   location: config.locationType
 });
 
+
+
 Router.map(function() {
-  this.route('users', function(){ 
+  this.route('users', function() {
     this.route('new');
-    this.route('show', { path: ':user_id'});
-    this.route('dogs', function(){
-      
+    this.route('show', { path: ':user_id' }, function() {
+      this.route('dogs', function() {
+      });
     });
-    this.route('edit', { path: ':user_id/edit'});
+    this.route('edit', { path: ':user_id/edit' });
   });
 });
 

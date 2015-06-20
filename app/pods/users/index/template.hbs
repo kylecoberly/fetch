@@ -14,7 +14,7 @@
   <tbody>
     {{#each user in model}}
     <tr>
-      <td>{{link-to user.fullName 'users.show' user}}</td>
+      <td>{{link-to user.fullName 'users.show.dogs.index' user.id}}</td>
       <td>{{user.totalDogs}}</td>
       <td><a href="#" {{action 'delete' user}}>Delete</a></td>
     </tr>
