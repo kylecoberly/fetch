@@ -9,9 +9,11 @@ Router.map(function() {
   this.route('users', function(){ 
     this.route('new');
     this.route('show', { path: ':user_id'});
+    this.route('dogs', function(){
+      
+    });
     this.route('edit', { path: ':user_id/edit'});
   });
-  this.route('dogs');
 });
 
 export default Router;
