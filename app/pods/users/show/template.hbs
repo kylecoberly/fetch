@@ -1,9 +1,10 @@
-
-<h1>{{model.fullName}}</h1>
-<ul>
-  <li>First Name: {{model.firstName}}</li>
-  <li>Last Name: {{model.lastName}}</li>
-  <li>Email: {{model.email}}</li>
-  
-  <button>{{link-to 'Edit' 'users.edit' model}}</button>
-</ul>
+<div class="friend profile">
+  <p>{{model.firstName}}</p>
+  <p>{{model.lastName}}</p>
+  <p>{{model.email}}</p>
+  <p>{{link-to 'Edit' 'users.edit' model}}</p>
+  <p><a href="#" {{action 'delete' model}}>Delete</a></p>
+</div>
+<div class="dogs-container">
+  {{outlet}}
+</div>
