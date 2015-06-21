@@ -1,4 +1,25 @@
-<form>
+<td>{{dog.name}}</td>
+<td>{{dog.age}}</td>
+<td>{{dog.gender}}</td>
+{{!-- content contains available options, one attribute is specified and bound through the attribute selelction.
+
+  If passing a collection of objects, we have to specify the properties option Value Path and optionLabelPath --}}
+  <td>{{view 'select' content=dogBreeds selection=dog.breed}} </td>
+  <td>
+    {{!-- dog.isSaving belongs to dog, and is true if teh model tries to persist any changes to backend --}}
+    {{#if dog.isSaving}}
+    <p>Saving ...</p>
+    {{!-- true if there is a change to the model  --}}
+    {{else if dog.isDirty}}
+    <button {{action 'saveDog' dog}}>Save</button>
+    {{/if}}
+  </td>
+
+
+
+
+
+{{!-- <form>
   <h2>{{errorMessage}}</h2>
 
   <fieldset>
@@ -11,3 +32,4 @@
     <button {{action 'cance'}}>Cancel</button>
   </fieldset>
 </form>
+ --}}
