@@ -9,13 +9,13 @@ export default Ember.Route.extend({
   },
   actions: {
     save: function(){
-      var _this = this;
-      var model = this.modelFor('dogs/new');
+      let _this = this,
+      model = this.modelFor('dogs/new');
 
       model.save().then(function(){
         _this.transitionTo('dogs');
       });
-    },
+    },  
     cancel: function(){
       this.transitionTo('dogs');
     }
