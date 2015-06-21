@@ -4,15 +4,14 @@ export default Ember.Component.extend({
   user: null,
   routeAfterCancel: null,
 
-  isValid: Ember.computed(
-    'user.email',
-    'user.firstName',
-    'user.lastName',
-    function(){
-      return !Ember.isEmpty(this.get('user.email')) &&
-      !Ember.isEmpty(this.get('user.firstName')) &&
-      !Ember.isEmpty(this.get('user.lastName'));
-    }),
+  hasEmail: Ember.computed.notEmpty('user.email'),
+  hasFirstName: Ember.computed.notEmpty('user.firstName'),
+  hasLastName: Ember.computed.notEmpty('user.lastName'),
+  isValid: Ember.computed.and(
+    'hasEmail',
+    'hasFirstName',
+    'hasLastName'
+    ),
   actions: {
     save: function(){
       if (this.get('isValid')){
@@ -32,3 +31,7 @@ export default Ember.Component.extend({
     }
   }
 });
+
+
+
+
