@@ -52,31 +52,3 @@ Specify what it takes to deploy your app.
 * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
 # fetch
-button{
-display: inline-block;
-padding: 15px 30px;
-border: 2px solid #51CBEE !important;
-border-color:#51CBEE !important;
-color:#51CBEE;
-box-shadow:0px 0px 2px 1px #03B3B3,
-inset 0px 0px 2px #03b3b3;
-text-shadow:0px 0px 2px #03B3B3;
-border-radius:40px;
-background-color: #fff !important;
--webkit-border-radius: 3px;
--moz-border-radius: 3px;
--o-border-radius: 3px;
--ms-border-radius: 3px;
--khtml-border-radius: 3px;
-border-radius: 3px;
-}
-button:hover {
-box-shadow:0px 0px 10px 5px #03B3B3,
-inset 0px 0px 7px #03B3B3;
-text-shadow:0px 0px 4px #03B3B3;
-}
-button {
--webkit-transition: all 0.25s ease-in-out;
--moz-transition: all 0.25s ease-in-out;
-transition: all 0.25s ease-in-out;
-}

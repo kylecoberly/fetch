@@ -12,8 +12,8 @@
     </tr>
   </thead>
   <tbody>
-{{!-- iterate over dogs and link possible breeds to breeds. Passing dogs as attributes and bounding save ation to another also called save--}}
-  {{#each model as |dog|}}
+    {{!-- iterate over dogs and link possible breeds to breeds. Passing dogs as attributes and bounding save ation to another also called save--}}
+    {{#each model as |dog|}}
     {{dogs/dog-form dog=dog save='save' dogBreeds=possibleBreeds}}
     {{/each}}
   </tbody>

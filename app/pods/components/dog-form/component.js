@@ -13,12 +13,21 @@ export default Ember.Component.extend({
       !Ember.isEmpty(this.get('dog.breed'));
     }),
   actions: {
-    saveDog: function(dog){
-      this.sendAction('save', dog);
+    autoSave: function(){
+      let dog = this.get('dog');
+      if (!dog.get('isNew')){
+        this.sendAction('save', dog);
+      }
     },
-    cancel: function(){
-      return false;
-    }
+    stateChanged: Ember.on('init', Ember.observer('dog.id', function(){
+      let dog = this.get('dog');
+      // checking to see that it is saving or not 
+      if (dog.get('isDirty') && !dog.get('isSaving')){
+        // since observers are synchronous, guarantees the fxn passed will be called only once
+        // during running loop(observer still called twice)
+        Ember.run.once(this, this.autoSave);
+      }
+    }))
   }
 });
 
