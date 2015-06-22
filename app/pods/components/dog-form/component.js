@@ -21,7 +21,10 @@ export default Ember.Component.extend({
     },
     stateChanged: Ember.on('init', Ember.observer('dog.id', function(){
       let dog = this.get('dog');
+      // checking to see that it is saving or not 
       if (dog.get('isDirty') && !dog.get('isSaving')){
+        // since observers are synchronous, guarantees the fxn passed will be called only once
+        // during running loop(observer still called twice)
         Ember.run.once(this, this.autoSave);
       }
     }))
