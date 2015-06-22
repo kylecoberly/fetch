@@ -26,7 +26,7 @@ export default Ember.Component.extend({
     },
     cancel: function(){
       let nextRoute = this.get('routeAfterCancel');
-      this.transitionToRoute(nextRoute, this.get('user'));
+      this.send('cancel', nextRoute, this.get('user'));
       return false;
     }
   }

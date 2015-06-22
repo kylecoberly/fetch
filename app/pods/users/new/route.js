@@ -12,10 +12,9 @@ export default Ember.Route.extend({
 
       return true;
     },
-    cancel: function(){
+    cancel: function(route, user){
+      this.transitionTO(route, user);
       console.log('+-- cancel action bubbled up to users new route');
-
-      return true;
     }
   }
 });
